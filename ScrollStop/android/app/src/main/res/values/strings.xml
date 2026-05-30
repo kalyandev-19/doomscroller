@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ScrollStop</string>
+    <string name="accessibility_description">ScrollStop monitors Instagram Reels and YouTube Shorts to help you control your daily scroll limit. No personal data is collected or transmitted off your device.</string>
+</resources>

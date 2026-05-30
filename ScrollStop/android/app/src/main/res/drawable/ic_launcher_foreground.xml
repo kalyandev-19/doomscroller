@@ -1,0 +1,20 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Background circle -->
+    <path
+        android:fillColor="#6366F1"
+        android:pathData="M0,0 L108,0 L108,108 L0,108 Z"/>
+    <!-- Hand icon (representing stop/control) -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,20 C54,20 38,30 38,48 C38,56 42,62 48,65 L48,85 C48,87.2 49.8,89 52,89 L56,89 C58.2,89 60,87.2 60,85 L60,65 C66,62 70,56 70,48 C70,30 54,20 54,20 Z
+                          M46,50 C46,50 44,48 44,44 C44,36 50,28 54,24 C58,28 64,36 64,44 C64,48 62,50 62,50 L46,50 Z"/>
+    <!-- Accent teal accent line -->
+    <path
+        android:strokeColor="#00B4D8"
+        android:strokeWidth="3"
+        android:pathData="M38,52 L70,52"/>
+</vector>

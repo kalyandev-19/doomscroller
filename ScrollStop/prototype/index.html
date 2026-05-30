@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ScrollStop - Interactive Prototype</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Controller / Explainer -->
+        <div class="info-sidebar">
+            <div class="sidebar-header">
+                <div class="app-logo">
+                    <i class="fa-solid fa-hand-holding-hand"></i>
+                    <span>ScrollStop</span>
+                </div>
+                <span class="badge">v1.0.0</span>
+            </div>
+            
+            <div class="sidebar-content">
+                <h1>Stop Doomscrolling. Reclaim Your Time.</h1>
+                <p>ScrollStop intercepts Instagram Reels and YouTube Shorts at a low system level using Android Accessibility Services and iOS Screen Time APIs. It leaves direct messages, standard posts, and long-form videos fully open while blocking only the addictive short-form video feeds.</p>
+                
+                <div class="simulation-panel">
+                    <h3>Interactive Simulation Controller</h3>
+                    <p class="sim-help">Use these controls to interact with the simulated phone screen on the right.</p>
+                    
+                    <div class="ctrl-group">
+                        <label>Simulated Scroll Count</label>
+                        <div class="scroll-counter-control">
+                            <button id="btn-dec-scroll" class="btn-icon"><i class="fa-solid fa-minus"></i></button>
+                            <span id="lbl-sim-scrolls">12</span>
+                            <button id="btn-inc-scroll" class="btn-icon"><i class="fa-solid fa-plus"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="ctrl-group">
+                        <label>Limit Settings</label>
+                        <div class="sim-limit-info">
+                            <span>Daily Limit: <strong id="lbl-sim-limit">15</strong> Reels/Shorts</span>
+                        </div>
+                    </div>
+
+                    <div class="btn-stack">
+                        <button id="btn-trigger-block" class="btn-primary-outline"><i class="fa-solid fa-ban"></i> Force Trigger Block Screen</button>
+                        <button id="btn-reset-prototype" class="btn-secondary-outline"><i class="fa-solid fa-rotate-left"></i> Reset Onboarding & Settings</button>
+                    </div>
+                </div>
+
+                <div class="architecture-features">
+                    <h3>Under The Hood Architecture</h3>
+                    <div class="tech-item">
+                        <div class="tech-icon android-color"><i class="fa-brands fa-android"></i></div>
+                        <div class="tech-details">
+                            <h4>Android Accessibility Service</h4>
+                            <p>Scans the viewport node hierarchy to detect Reels/Shorts view IDs. Increments counters on vertical swipe gestures.</p>
+                        </div>
+                    </div>
+                    <div class="tech-item">
+                        <div class="tech-icon ios-color"><i class="fa-brands fa-apple"></i></div>
+                        <div class="tech-details">
+                            <h4>iOS Screen Time API</h4>
+                            <p>Utilizes FamilyControls and DeviceActivityMonitor to track duration/launches. Configures ManagedSettings shields.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <p>ScrollStop Mobile Design & Prototype &copy; 2026</p>
+            </div>
+        </div>
+
+        <!-- Phone Mockup Container -->
+        <div class="phone-wrapper">
+            <div class="smartphone">
+                <div class="phone-notch"></div>
+                <div class="phone-screen">
+                    <!-- Status Bar -->
+                    <div class="status-bar">
+                        <span id="phone-time">09:41</span>
+                        <div class="status-icons">
+                            <i class="fa-solid fa-signal"></i>
+                            <i class="fa-solid fa-wifi"></i>
+                            <i class="fa-solid fa-battery-full"></i>
+                        </div>
+                    </div>
+
+                    <!-- Screen Container (where screens are rendered) -->
+                    <div id="screen-container">
+                        <!-- Screens will be injected/swapped here via JavaScript -->
+                    </div>
+                    
+                    <!-- Home Indicator -->
+                    <div class="home-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Source -->
+    <script src="app.js"></script>
+</body>
+</html>

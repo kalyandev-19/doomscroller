@@ -14,6 +14,9 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
 import java.util.Locale
+import android.content.Intent
+import com.scrollstop.service.ScrollStopForegroundService
+
 
 /**
  * BlockOverlayWindow manages the low-level overlay layout drawn directly onto the screen.
